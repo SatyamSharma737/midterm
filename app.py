@@ -103,7 +103,7 @@ def main():
    </div>
    """
     st.markdown(html_temp,unsafe_allow_html=True)
-    st.header("Item Purchase Prediction")
+    st.header("Heart Disease Prediction")
     age = st.number_input('Insert a Age',18,60)
     cp = st.number_input('Insert a cp',1,5)
     trestbps = st.number_input('Insert a trestbps',100,200)
@@ -122,7 +122,7 @@ def main():
     resul=""
     if st.button("Predict"):
       result=predict_note_authentication(age,cp,trestbps,chol,fbs,Gender,Geography,restecg,thalach,exang,oldpeak,slope,ca,thal)
-      st.success('Model has predicted {}'.format(result))
+      st.success('Model has predicted Category {}'.format(result))
     if st.button("About"):
       st.subheader("Developed by Satyam Sharma")
       st.subheader("PIET")
